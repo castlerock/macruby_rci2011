@@ -5,7 +5,7 @@ begin
   
   #File.new("/no-way.txt", "w"). close
   
-  File.new("/tmp/no-way.txt", "w"). close
+  File.new("/tmp/maybe.txt", "w"). close
 rescue SystemCallError => ex
   puts ex.class
   puts ex.message

@@ -1,4 +1,4 @@
-class SimpleBlockOperation < NSOperation
+class SimpleOperation < NSOperation
   attr_accessor :block
   
   def initWithBlock(blk)
@@ -17,5 +17,5 @@ class SimpleBlockOperation < NSOperation
 end
 
 queue = NSOperationQueue.mainQueue
-queue.addOperation SimpleBlockOperation.alloc.initWithBlock lambda{ puts "HI" }
+queue.addOperation SimpleOperation.alloc.initWithBlock lambda{ puts "HI" }
 NSRunLoop.currentRunLoop.runUntilDate(NSDate.dateWithTimeIntervalSinceNow(1.0))
